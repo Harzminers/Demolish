@@ -410,6 +410,7 @@
 "Assets/Scripts/ScriptableObjects/WaitAction.cs"
 "Assets/Scripts/SelectableObject.cs"
 "Assets/Scripts/SelfDestruct.cs"
+"Assets/Scripts/TimelineActionAddingSelectionUI.cs"
 "Assets/Scripts/TimelineCannon.cs"
 -langversion:9.0
 

@@ -74,6 +74,7 @@
     <Compile Include="Assets\Assets\Color Studio\Runtime\HSLColor.cs" />
     <Compile Include="Assets\Assets\Color Studio\Runtime\ColorEntry.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\TimelineActionAddingSelectionUI.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraSwitches.cs" />
     <Compile Include="Assets\Assets\RayFire\Tutorial\Scripts\FadingEventScript.cs" />
     <Compile Include="Assets\Assets\Color Studio\Runtime\Recolor.cs" />
@@ -99,19 +100,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\RayFire\Plugins\Windows\x86_x64\RFLib_DotNet_2018.dll" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Assets\RayFire\Plugins\Android\RFLib_DotNet_2018_andr.dll" />
     <None Include="Assets\Assets\RayFire\Plugins\Windows\x86_x64\RFLib_CNative_2018.dll" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Assets\RayFire\Plugins\Linux\RFLib_DotNet_2018_lin.dll" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Assets\RayFire\Plugins\Windows\x86\RFLib_CNative_2018_x86.dll" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Assets\RayFire\Info\FAQ.txt" />
     <None Include="Assets\Assets\Color Studio\README.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Assets\RayFire\Plugins\Windows\x86\RFLib_DotNet_2018_x86.dll" />
     <None Include="Assets\Assets\RayFire\Plugins\Ios\RFLib_DotNet_2018_ios.dll" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Assets\RayFire\Info\CHANGELOG.txt" />
     <None Include="Assets\Assets\RayFire\Plugins\Mac\RFLib_DotNet_2018_osx.dll" />
     <None Include="Assets\Assets\RayFire\Info\README.txt" />
     <None Include="Assets\Assets\RayFire\WhereToStart.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Assets\RayFire\Info\License.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
