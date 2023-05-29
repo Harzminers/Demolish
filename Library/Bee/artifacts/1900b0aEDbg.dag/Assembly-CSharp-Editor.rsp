@@ -404,6 +404,13 @@
 "Assets/Assets/Color Studio/Editor/PPWindow.Ops.cs"
 "Assets/Assets/Color Studio/Editor/RecolorEditor.cs"
 "Assets/Assets/Color Studio/Editor/SerializedPropertyExtensions.cs"
+"Assets/Assets/HighlightPlus/Editor/HighlightEffectEditor.cs"
+"Assets/Assets/HighlightPlus/Editor/HighlightManagerEditor.cs"
+"Assets/Assets/HighlightPlus/Editor/HighlightProfileEditor.cs"
+"Assets/Assets/HighlightPlus/Editor/HighlightSeeThroughOccluderEditor.cs"
+"Assets/Assets/HighlightPlus/Editor/HighlightTriggerEditor.cs"
+"Assets/Assets/HighlightPlus/Editor/TransparentWithDepth.cs"
+"Assets/Assets/HighlightPlus/Editor/VRCheck.cs"
 -langversion:9.0
 
 /deterministic

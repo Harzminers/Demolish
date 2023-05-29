@@ -13,7 +13,6 @@ public class TimelineCannon : MonoBehaviour
     [SerializeField] float _cannonStrength = 10;
     [SerializeField] float _trajectoryTimeToDraw = 5f;
     [SerializeField] int _resolution = 30;
-    [SerializeField] Vector3 _startVelocity;
     [SerializeField] LayerMask _projectileLayermask;
 
     [SerializeField] Material _selectedMaterial;
@@ -30,7 +29,6 @@ public class TimelineCannon : MonoBehaviour
     float rotationX => transform.eulerAngles.x;
     float rotationY => transform.eulerAngles.y;
 
-    bool _isHighlighted = false;
 
     Vector3 _currentStartVelocity;
 
@@ -72,12 +70,10 @@ public class TimelineCannon : MonoBehaviour
         {
             _cannonPodest.GetComponent<MeshRenderer>().material = _selectedMaterial;
             BomberGameManager.Instance.SnapCamerasToCannon(this);
-            _isHighlighted = true;
         }
         else
         {
             _cannonPodest.GetComponent<MeshRenderer>().material = _notSelectedMaterial;
-            _isHighlighted = false;
         }
     }
     void DrawTrajectory(Vector3 velocity, int resolution, float time)

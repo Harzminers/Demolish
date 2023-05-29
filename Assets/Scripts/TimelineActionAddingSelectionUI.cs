@@ -3,18 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TimelineActionAddingSelectionUI : MonoBehaviour
 {
     [SerializeField] string _filePathToActionsFolder;
-    
+    [Header("UI Component Prefabs")]
     [SerializeField] GameObject _categorySelector;
     [SerializeField] GameObject _actionSelector;
 
     [SerializeField] GameObject _actionListObject;
 
+    [Header("Fallback UI Visuals")]
+    [SerializeField] Sprite _defaultCategoryIcon;
+
+    public event Action<ITimeLineAction> onActionSelectedToAdd;
+
     List<GameObject> _categorySelectors = new List<GameObject>();
-    Dictionary<int,List<Object>> _categories = new Dictionary<int, List<Object>>();
+    Dictionary<int,List<UnityEngine.Object>> _categories = new Dictionary<int, List<UnityEngine.Object>>();
 
     ITimeLineAction _selectedAction;
     int _selectedCategory = 0;
@@ -32,17 +38,17 @@ public class TimelineActionAddingSelectionUI : MonoBehaviour
             GameObject newCategorySelector = Instantiate(_categorySelector, transform);
 
             Texture2D tex = (Texture2D)Resources.Load($"CategoryIcons/{folderName}_CategoryIcon");
-            Sprite categorySprite = Sprite.Create(
+            Sprite categorySprite = tex? Sprite.Create(
                  tex,
                 new Rect(0,0,tex.width,tex.height),
-                Vector2.zero);
+                Vector2.zero) : _defaultCategoryIcon;
 
             newCategorySelector.GetComponentsInChildren<Image>()[1].sprite = categorySprite;
             int index = count;
             newCategorySelector.GetComponent<Button>().onClick.AddListener(() => OpenCategory(index));
             _categorySelectors.Add(newCategorySelector);
 
-            List<Object> categoryActions = Resources.LoadAll($"{_filePathToActionsFolder}/{folderName}").ToList();
+            List<UnityEngine.Object> categoryActions = Resources.LoadAll($"{_filePathToActionsFolder}/{folderName}").ToList();
             _categories.Add(count, categoryActions);
 
         }
@@ -50,7 +56,6 @@ public class TimelineActionAddingSelectionUI : MonoBehaviour
 
     void OpenCategory(int index)
     {
-        Debug.Log(index);
         if (_categories[index] == null) Debug.LogError($"Tried to access non existent TimelineAction Category on `{name}`");
 
         if (_selectedCategory == index) return;
@@ -66,7 +71,7 @@ public class TimelineActionAddingSelectionUI : MonoBehaviour
 
         for(int i = 0; i< _categories[index].Count; i++)
         {
-            Object action = _categories[index][i];
+            UnityEngine.Object action = _categories[index][i];
 
             GameObject newAction = currentListElementCount <= i ? Instantiate(_actionSelector,_actionListObject.transform) : _actionListObject.transform.GetChild(i).gameObject;
             newAction.SetActive(true);
@@ -80,5 +85,6 @@ public class TimelineActionAddingSelectionUI : MonoBehaviour
     void SelectAction(ITimeLineAction action)
     {
         _selectedAction = action;
+        onActionSelectedToAdd?.Invoke(action);
     }
 }

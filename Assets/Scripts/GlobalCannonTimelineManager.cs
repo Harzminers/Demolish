@@ -18,6 +18,7 @@ public class GlobalCannonTimelineManager : MonoBehaviour
     {
         SelectableObject.OnObjectSelectionComplete += UpdateUIifTargetChanged;
         _ui = GetComponent<CannonTimelineUI>();
+
     }
     public void AddCannonFireAction() 
     {
